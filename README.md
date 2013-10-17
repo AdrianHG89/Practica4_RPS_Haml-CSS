@@ -1,4 +1,4 @@
-<center>![](http://i1296.photobucket.com/albums/ag1/adrihg89/Piedra_papel_tijeras_zpsf31ae8ab.jpg)</center>
+![](http://i1296.photobucket.com/albums/ag1/adrihg89/Piedra_papel_tijeras_zpsf31ae8ab.jpg)
 
 Práctica 4 - Añadir CSS a nuestra aplicacion RPS:
 ===========
@@ -25,4 +25,4 @@ Para ejecutar la aplicacion deberemos hacer lo siguiente:
 4.Desarrollador
 ---------------
 
-	Adrián Hernández González
+* Adrián Hernández González
