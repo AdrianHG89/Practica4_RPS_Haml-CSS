@@ -1,4 +1,4 @@
-require './lib/rps.rb'
+require './lib/RockPaperScissors'
 
 
 builder = Rack:: Builder.new do
