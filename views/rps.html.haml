@@ -3,100 +3,43 @@
 	%head
 		%title Practica - Rock, Paper and Scissors
 		%meta{content: "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
-		:css
-			BODY {
-				font: 8pt Verdana, Geneva, Arial, Helvetica, sans-serif;
-				margin: 10 0 10 0px;
-				text-align: center;
-				background-color: #ebebeb;
-			}
-			#contenedor{
-				text-align: left;
-				width: 770px;
-				margin: auto;
-			}
-			#cabecera{
-				background-color: #d0d0ff;
-				color: #333300;
-				font-size:12pt;
-				font-weight: bold;
-				padding: 3 3 3 10px;
-				heigh: 400px;
-
-			}
-			#cuerpo{
-				margin: 10 0 10 0px;
-			}
-			#lateral{
-				width: 310px;
-				background-color: #999999;
-				float:left;
-			}
-			#principal{
-				margin-left: 320px;
-				background-color: #ffffff;
-				padding: 4 4 4 4px;
-				width: 120px;
-			}
-			#otrolado{
-				width: 310px;
-				float: right;
-				background-color: #999999;
-			}
-			#pie{
-				background-color: #cccccc;
-				padding: 3 10 3 10px;
-				text-align:right;   
-				clear: both;
-				margin-top: 230px;
-			}
-			.enlaceboton{
-				font-family: verdana, arial, sans-serif;
-				font-size: 20pt;
-				font-weight: bold;
-				background-color: #424242;
-				color: white;
-				text-decoration: none;
-				margin-top: 100px;
-			}
+		%link{:href => "/public/css/bootstrap.css", :rel => "stylesheet"}
+    		%link{:href => "/public/css/bootstrap-responsive.css", :rel => "stylesheet"}
 	%body
-		#contenedor
-			#cabecera
-				Practica 3 - Rock, Paper and Scissors
-				%ol
-					%h3 Elige aqui piedra, papel o tijera...
-					%a.enlaceboton{:href => '?jugada=rock'} Piedra					
-					%a.enlaceboton{:href => '?jugada=paper'} Papel
-					%a.enlaceboton{:href => '?jugada=scissors'} Tijera
-			#cuerpo
-				#lateral
-					%h2 Persona:
-					
-					- if(player_throw == 'rock')
-						%center
-							%img{:src => 'http://i1296.photobucket.com/albums/ag1/adrihg89/rock_zps0ebe7421.jpg', :alt => 'Rock', height: '250', width: '250'}
-					- elsif (player_throw == 'scissors')
-						%center
-							%img{:src => 'http://i1296.photobucket.com/albums/ag1/adrihg89/tijeras_zps543ca9ac.jpg', :alt => 'Scissors', height: '250', width: '250'}
-					- elsif (player_throw == 'paper')
-						%center
-							%img{:src => 'http://i1296.photobucket.com/albums/ag1/adrihg89/paper_zpse0ed0ca5.jpg', :alt => 'Paper', height: '250', width: '250'}
-				#otrolado
-					%h2 Maquina:
-					- if(throws.include?(player_throw))	
-						- if(computer_throw == 'rock')
-							%center
-								%img{:src => 'http://i1296.photobucket.com/albums/ag1/adrihg89/rock_zps0ebe7421.jpg', :alt => 'Rock', height: '250', width: '250'}
-						- elsif (computer_throw == 'scissors')
-							%center
-								%img{:src => 'http://i1296.photobucket.com/albums/ag1/adrihg89/tijeras_zps543ca9ac.jpg', :alt => 'Scissors', height: '250', width: '250'}
-						- elsif (computer_throw == 'paper')
-							%center
-								%img{:src => 'http://i1296.photobucket.com/albums/ag1/adrihg89/paper_zpse0ed0ca5.jpg', :alt => 'Paper', height: '250', width: '250'}
-				#principa
-					%center
-						%h1 Vs.
+		.container
+		  / Main hero unit for a primary marketing message or call to action
+		  .hero-unit
+		    %h1 Juega a Piedra, Papel o Tijera
+		    %p Elije una de las jugadas.
+		  / Example row of columns
+		  .row
+		    .span4
+		      %h2 Jugador
+			- if(player_throw == 'rock')
 				%center
-					%h3= anwser
-			#pie
-				© 2013 Sistemas y Tecnologias Web - ETSII
+					%img{:src => 'http://i1296.photobucket.com/albums/ag1/adrihg89/rock_zps0ebe7421.jpg', :alt => 'Rock', height: '250', width: '250'}
+			- elsif (player_throw == 'scissors')
+				%center
+					%img{:src => 'http://i1296.photobucket.com/albums/ag1/adrihg89/tijeras_zps543ca9ac.jpg', :alt => 'Scissors', height: '250', width: '250'}
+			- elsif (player_throw == 'paper')
+				%center
+					%img{:src => 'http://i1296.photobucket.com/albums/ag1/adrihg89/paper_zpse0ed0ca5.jpg', :alt => 'Paper', height: '250', width: '250'}
+		    .span4
+			%center
+				%h2 Vs.
+				%h3= anwser
+		    .span4
+		      %h2 Maquina
+			- if(throws.include?(player_throw))	
+				- if(computer_throw == 'rock')
+					%center
+						%img{:src => 'http://i1296.photobucket.com/albums/ag1/adrihg89/rock_zps0ebe7421.jpg', :alt => 'Rock', height: '250', width: '250'}
+				- elsif (computer_throw == 'scissors')
+					%center
+						%img{:src => 'http://i1296.photobucket.com/albums/ag1/adrihg89/tijeras_zps543ca9ac.jpg', :alt => 'Scissors', height: '250', width: '250'}
+				- elsif (computer_throw == 'paper')
+					%center
+						%img{:src => 'http://i1296.photobucket.com/albums/ag1/adrihg89/paper_zpse0ed0ca5.jpg', :alt => 'Paper', height: '250', width: '250'}
+		  %hr/
+		  %footer
+		    %p © 2013 Sistemas y Tecnologias Web - ETSII

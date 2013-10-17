@@ -16,7 +16,7 @@ module RockPaperScissors
 		def call(env)
 			req = Rack::Request.new(env)
 			computer_throw = @throws.sample
-			player_throw = req.GET["choice"]
+			player_throw = req.GET["jugada"]
 			anwser =
 				if !@throws.include?(player_throw)
 					"Realiza tu jugada."
