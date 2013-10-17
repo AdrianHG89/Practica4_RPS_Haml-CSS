@@ -1,6 +1,6 @@
 <center>![](http://i1296.photobucket.com/albums/ag1/adrihg89/Piedra_papel_tijeras_zpsf31ae8ab.jpg)</center>
 
-Práctica 4 - Añadir CSS a nuestra aplicacion Piedra, Papel o Tijera:
+Práctica 4 - Añadir CSS a nuestra aplicacion RPS:
 ===========
  
 1. Objetivo
